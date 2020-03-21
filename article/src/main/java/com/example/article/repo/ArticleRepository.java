@@ -1,4 +1,8 @@
 package com.example.article.repo;
 
-public interface ArticleRepository {
+import com.example.article.entity.Article;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ArticleRepository extends JpaRepository<Article, Integer> {
+
 }
