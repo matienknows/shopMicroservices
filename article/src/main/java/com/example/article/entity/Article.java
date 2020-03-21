@@ -4,15 +4,15 @@ package com.example.article.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="article")
+@Table(name="Article")
 public class Article {
 
     @Id
     @GeneratedValue
-    private int articleId;
+    private int id;
 
     @Column(name="name")
-    private String name;
+    private String articleName;
 
     @Column(name="price")
     private float price;
@@ -22,20 +22,20 @@ public class Article {
 
     }
 
-    public int getArticleId() {
-        return articleId;
+    public int getId() {
+        return id;
     }
 
-    public void setArticleId(int articleId) {
-        this.articleId = articleId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getArticleName() {
+        return articleName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setArticleName(String articleName) {
+        this.articleName = articleName;
     }
 
     public float getPrice() {
