@@ -4,9 +4,7 @@ package com.example.order.controller;
 import com.example.order.entity.Orders;
 import com.example.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,4 +19,11 @@ public class OrderController {
     public List<Orders> getOrderList(){
         return orderService.getOrderList();
     }
+
+    @PostMapping
+    public void addOrder(@RequestBody Orders orders){
+        orderService.addOrders(orders);
+
+    }
+
 }
