@@ -1,4 +1,4 @@
 package com.example.shop.service;
 
-public class ShopService {
+public class ShopServiceProxy {
 }
