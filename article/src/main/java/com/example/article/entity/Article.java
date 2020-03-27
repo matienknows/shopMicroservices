@@ -17,9 +17,16 @@ public class Article {
     @Column(name="price")
     private float price;
 
+    private int port;
 
     public Article() {
 
+    }
+
+    public Article(String articleName, float price) {
+        super();
+        this.articleName = articleName;
+        this.price = price;
     }
 
     public int getId() {
@@ -45,4 +52,14 @@ public class Article {
     public void setPrice(float price) {
         this.price = price;
     }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
+    }
+
+
 }

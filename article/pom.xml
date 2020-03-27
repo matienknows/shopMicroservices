@@ -8,11 +8,11 @@
 		<version>2.2.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>article</artifactId>
+	<groupId>com.example.article</groupId>
+	<artifactId>article-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>article</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Microservices with Spring Boot and Spring Cloud - Article Service</description>
 
 	<properties>
 		<java.version>1.8</java.version>

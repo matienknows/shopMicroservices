@@ -15,14 +15,16 @@ public class ArticleService {
     @Autowired
     private ArticleRepository articleRepository;
 
-    public Optional<Article> getArticlebyId(int id){
-        return articleRepository.findById(id);
-    }
 
     public List<Article> getArticleList(){
         return articleRepository.findAll();
 
     }
+
+    public Article getArticleById(int id){
+        return articleRepository.findById(id).get();
+    }
+
 
     public void addArticle(Article article){
         articleRepository.save(article);
