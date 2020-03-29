@@ -11,11 +11,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/customer")
-@CrossOrigin(origins = "http://localhost:3000")
 public class CustomerController {
 
     @Autowired
     private CustomerService customerService;
+
+    @GetMapping(value="/customerid/{id}")
+    public Customer retrieveCustomer(@PathVariable int id){
+        return customerService.getCustomerById(id);
+    }
 
     @GetMapping
     public List<Customer> getCustomerList() {

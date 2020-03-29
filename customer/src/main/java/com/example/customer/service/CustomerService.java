@@ -15,8 +15,8 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
-    public Optional<Customer> getCustomerById(int id) {
-       return customerRepository.findById(id);
+    public Customer getCustomerById(int id) {
+       return customerRepository.findById(id).get();
 
     }
     public List<Customer> getCustomerList(){
