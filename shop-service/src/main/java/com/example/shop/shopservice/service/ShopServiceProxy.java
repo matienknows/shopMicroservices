@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 @FeignClient(name="article-service", url="localhost:8000")
-@RibbonClient(name="article-service")
 public interface ShopServiceProxy {
     @GetMapping("/article/id/{id}")
     public Shop retrieveArticle(@PathVariable("id") int id);
