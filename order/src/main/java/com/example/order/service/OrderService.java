@@ -18,6 +18,9 @@ public class OrderService {
         return orderRepository.findAll();
     }
 
+    public Orders getOrderById(int id){
+        return orderRepository.findById(id).get();
+    }
     public void addOrders(Orders orders){
         orderRepository.save(orders);
     }

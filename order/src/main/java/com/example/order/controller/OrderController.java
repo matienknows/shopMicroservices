@@ -9,11 +9,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/orders")
+@RequestMapping("/order_ms")
 public class OrderController {
 
     @Autowired
     private OrderService orderService;
+
+    @GetMapping(value="order_id/{id}")
+    public Orders retrieveOrder(@PathVariable int id){
+        return orderService.getOrderById(id);
+    }
+
+
 
     @GetMapping
     public List<Orders> getOrderList(){
