@@ -10,6 +10,8 @@ public class Shop {
     private int orderId;
     private int port;
 
+
+
     public Shop(){
 
     }
@@ -32,7 +34,10 @@ public class Shop {
         return articleid;
     }
 
-
+    public Shop(int customerId, int orderId) {
+        this.customerId = customerId;
+        this.orderId = orderId;
+    }
 
     public void setArticleid(int articleid) {
         this.articleid = articleid;
