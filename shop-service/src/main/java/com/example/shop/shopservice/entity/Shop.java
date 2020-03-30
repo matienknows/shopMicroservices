@@ -5,8 +5,11 @@ public class Shop {
     private String articleName;
     private float price;
     private int customerId;
+    private String firstName;
+    private String lastName;
     private int orderId;
     private int port;
+
     public Shop(){
 
     }
@@ -19,11 +22,17 @@ public class Shop {
         this.port = port;
     }
 
-
+    public Shop(int customerId, String firstName, String lastName) {
+        this.customerId = customerId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public int getArticleid() {
         return articleid;
     }
+
+
 
     public void setArticleid(int articleid) {
         this.articleid = articleid;
@@ -67,5 +76,21 @@ public class Shop {
 
     public void setPort(int port) {
         this.port = port;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

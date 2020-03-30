@@ -1,6 +1,7 @@
 package com.example.shop.shopservice.controller;
 
 import com.example.shop.shopservice.entity.Shop;
+import com.example.shop.shopservice.service.CustomerServiceProxy;
 import com.example.shop.shopservice.service.ShopServiceProxy;
 
 import org.slf4j.Logger;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,7 +22,10 @@ public class ShopController {
     @Autowired
     private ShopServiceProxy shopServiceProxy;
 
-    @GetMapping("article-feign/id/{id}")
+    @Autowired
+    private CustomerServiceProxy customerServiceProxy;
+
+    @GetMapping("article/id/{id}")
     public Shop getShopArticleFeign(@PathVariable int id){
 
         /*int uriVariable = id;
@@ -35,6 +40,17 @@ public class ShopController {
         logger.info("{}", response);
 
         return new Shop(response.getArticleid(), response.getArticleName(), response.getPrice(), response.getPort());
+
+    }
+
+    @GetMapping("customer/customerid/{id}")
+    public Shop getShopCustomerFeign(@PathVariable int id){
+
+        Shop response = customerServiceProxy.retrieveCustomer(id);
+
+        logger.info("{}", response);
+
+        return new Shop(response.getCustomerId(), response.getFirstName(), response.getLastName());
 
     }
 
