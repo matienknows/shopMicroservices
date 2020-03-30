@@ -1,13 +1,12 @@
-package com.example.article.controller;
+package com.example.article.configuration;
 
-import com.example.article.entity.Article;
-import com.example.article.service.ArticleService;
+import com.example.article.component.structure.Article;
+import com.example.article.component.behaviour.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/article")

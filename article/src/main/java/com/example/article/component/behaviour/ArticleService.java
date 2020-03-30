@@ -1,13 +1,12 @@
-package com.example.article.service;
+package com.example.article.component.behaviour;
 
 
-import com.example.article.entity.Article;
-import com.example.article.repo.ArticleRepository;
+import com.example.article.component.structure.Article;
+import com.example.article.configuration.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ArticleService {

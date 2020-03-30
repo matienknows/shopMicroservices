@@ -1,4 +1,4 @@
-package com.example.article.entity;
+package com.example.article.component.structure;
 
 
 import javax.persistence.*;
